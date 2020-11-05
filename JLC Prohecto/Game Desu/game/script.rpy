@@ -4,8 +4,12 @@
 # name of the character.
 
 define b = Character("Bobby Smith", image="bobby")
-define b = Character("Bobby Smith", image="bobby")
+# Eugene Zuckerberg
+define e = Character("Old Man", image="eugene angry right")
 image bobby neutral c = im.FactorScale("images/bobby neutral c.png", 0.7)
+image bobby neutral c left = Image("images/bobby neutral c.png", xalign=-1.0)
+image eugene angry = im.FactorScale("images/eugene angry.png", 0.7)
+image eugene angry right = Image("images/eugene angry.png", xalign=1.0)
 
 
 # The game starts here.
@@ -41,8 +45,35 @@ label start:
     b "Today i will take you on a tour of Japan where along the way you will learn japanese. (Kyō wa, nihongo o manabu Nihon tsuā ni go an'nai shimasu.)"
 
     b "Lets Go To The First Place!(Somosomo ikou)"
+    
+    hide bobby neutral c
+    scene street
+    with dissolve
+    show bobby neutral c
+    with dissolve
 
+    b "A few more minutes and we should be almost-(Ato sū-bu de, hobo)"
 
+    hide bobby neutral c
+    show eugene angry
+    with vpunch
+
+    e "EHHHH!?!?!? For goodness sake do you have eyes? (EHHHH!?!?!? Zen no tame ni anata wa me o motte imasu ka?)" 
+
+    show bobby neutral c
+    with dissolve
+    hide eugene angry
+
+    b "Relax Old man hes a foreigner(Kare wa gaikoku hitodearu rōjin o rirakkusu)"
+
+    hide bobby neutral c
+    with dissolve
+    show eugene angry
+    
+    e "*scoffs* Stupid (Baka)"
+
+    hide eugene angry
+    with dissolve
 
     # This ends the game.
 

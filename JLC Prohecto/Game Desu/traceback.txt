@@ -1,26 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 7, in script
-    image bobby neutral c = im.FactorScale("images/bobby neutral c.png")
-  File "game/script.rpy", line 7, in <module>
-    image bobby neutral c = im.FactorScale("images/bobby neutral c.png")
-TypeError: __init__() takes at least 3 arguments (2 given)
+  File "game/script.rpy", line 9, in script
+    image bobby neutral c left = Image.FactorScale("images/bobby neutral c.png", 0.7)
+  File "game/script.rpy", line 9, in <module>
+    image bobby neutral c left = Image.FactorScale("images/bobby neutral c.png", 0.7)
+AttributeError: 'function' object has no attribute 'FactorScale'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 7, in script
-    image bobby neutral c = im.FactorScale("images/bobby neutral c.png")
-  File "C:\Users\pierc\Downloads\renpy-7.3.5-sdk\renpy\ast.py", line 1013, in execute
+  File "game/script.rpy", line 9, in script
+    image bobby neutral c left = Image.FactorScale("images/bobby neutral c.png", 0.7)
+  File "C:\Users\pierc\Downloads\renpy-7.3.5-sdk/renpy/ast.py", line 1007, in execute
     img = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "C:\Users\pierc\Downloads\renpy-7.3.5-sdk\renpy\python.py", line 2052, in py_eval_bytecode
+  File "C:\Users\pierc\Downloads\renpy-7.3.5-sdk/renpy/python.py", line 2128, in py_eval_bytecode
     return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 7, in <module>
-    image bobby neutral c = im.FactorScale("images/bobby neutral c.png")
-TypeError: __init__() takes at least 3 arguments (2 given)
+  File "game/script.rpy", line 9, in <module>
+    image bobby neutral c left = Image.FactorScale("images/bobby neutral c.png", 0.7)
+AttributeError: 'function' object has no attribute 'FactorScale'
 
-Windows-8-6.2.9200
-Ren'Py 7.3.5.606
-Game Desu 1.0
-Thu Oct 29 14:04:13 2020
