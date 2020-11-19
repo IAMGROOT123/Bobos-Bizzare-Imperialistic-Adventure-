@@ -58,19 +58,19 @@ label start:
     show eugene angry
     with vpunch
 
-    e "EHHHH!?!?!? For goodness sake do you have eyes? (EHHHH!?!?!? Zen no tame ni anata wa me o motte imasu ka?)" 
+    e "*An old man yoinks your hand sanitizer*" 
 
+    hide eugene angry
     show bobby neutral c
     with dissolve
-    hide eugene angry
 
-    b "Relax Old man hes a foreigner(Kare wa gaikoku hitodearu rōjin o rirakkusu)"
+    b "HEY come back here with my friends hand sanitizer(Tomodachi no shushi shōdoku-zai o motte koko ni modotte kite ne)"
 
     hide bobby neutral c
     with dissolve
     show eugene angry
     
-    e "*scoffs* Stupid (Baka)"
+    e "*old man runs off like leprechaun laughing*"
 
     hide eugene angry
     with dissolve
