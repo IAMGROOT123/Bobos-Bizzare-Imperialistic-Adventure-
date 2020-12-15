@@ -10,7 +10,8 @@ define c = Character("Claire", image="claire neutral")
 define k = Character("Brock Spear", image="brockoli")
 define n = Character("Narrator", image="eugene angry right")
 image bobby neutral c = im.FactorScale("images/bobby neutral c.png", 0.7)
-image brockoli = im.FactorScale("images/brockoli.png", 0.5)
+image bobby_smiling_c = im.FactorScale("images/bobby neutral c.png", 0.7)
+image brockoli = im.FactorScale("images/brockoli.png", 0.7)
 image bobby neutral c left = Image("images/bobby neutral c.png", xalign=-1.0)
 image eugene angry = im.FactorScale("images/eugene angry.png", 0.7)
 image eugene angry right = Image("images/eugene angry.png", xalign=1.0)
@@ -32,7 +33,7 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show bobby neutral c with dissolve
+    show bobby_smiling_c with dissolve
 
     # These display lines of dialogue.
 
@@ -172,7 +173,9 @@ label lesbo:
     n "You and Bobo see an bald American man yelling at a kid"
 
     scene park2
-    show brockoli
+    show brockoli:
+        xalign 1.0
+        yalign 1.0
     with dissolve
 
     $ player_brock = renpy.input("You go up to the man and try to ask, in Japanese: Hello what is your name?")
@@ -180,8 +183,7 @@ label lesbo:
     $ player_brock = player_brock.strip()
 
     if player_brock == "":
-        n "Wrong, Time to Learn"    
-        jump badbrockoli
+        n "Wrong, You get beaten up by the old japanese nationalist for not knowing Japanese"    
     elif player_brock == "Konichiwa O-namae wa nan desu ka?":
         n "You said it correctly!"
         jump correctobrockoli 
@@ -195,7 +197,6 @@ label lesbo:
         n "You said it correctly!"
         jump correctobrockoli 
     else:
-        n "Wrong, Time to Learn"    
-        jump badbrockoli     
+        n "Wrong, You get beaten up by the old japanese nationalist for not knowing Japanese"
 
     return

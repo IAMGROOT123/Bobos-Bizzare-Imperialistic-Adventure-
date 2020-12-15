@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 56: expected statement.
-    vpunch
-          ^
+File "game/script.rpy", line 198: is not terminated with a newline. (Check strings and parenthesis.)
+(Perhaps you left out a " at the end of the first line.)
+            n "Wrong, You get beaten up by the old japanese nationalist for not knowing japanese    
 
 Ren'Py Version: Ren'Py 7.4.0.939
-Thu Nov  5 14:03:47 2020
+Tue Dec 15 15:38:26 2020

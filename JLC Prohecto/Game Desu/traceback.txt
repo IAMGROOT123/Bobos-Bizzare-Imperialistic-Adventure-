@@ -1,18 +1,18 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 190, in script
-    jump correctobrockoli
-ScriptError: could not find label 'correctobrockoli'.
+  File "game/script.rpy", line 185, in script
+    jump badbrockoli
+ScriptError: could not find label 'badbrockoli'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 190, in script
-    jump correctobrockoli
-  File "C:\Users\pierc\Downloads\renpy-7.3.5-sdk/renpy/ast.py", line 1697, in execute
+  File "game/script.rpy", line 185, in script
+    jump badbrockoli
+  File "renpy/ast.py", line 1697, in execute
     rv = renpy.game.script.lookup(target)
-  File "C:\Users\pierc\Downloads\renpy-7.3.5-sdk/renpy/script.py", line 900, in lookup
+  File "renpy/script.py", line 900, in lookup
     raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'correctobrockoli'.
+ScriptError: could not find label 'badbrockoli'.
 
