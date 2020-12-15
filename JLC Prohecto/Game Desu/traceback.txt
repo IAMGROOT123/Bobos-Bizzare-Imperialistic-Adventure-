@@ -1,22 +1,18 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 9, in script
-    image bobby neutral c left = Image.FactorScale("images/bobby neutral c.png", 0.7)
-  File "game/script.rpy", line 9, in <module>
-    image bobby neutral c left = Image.FactorScale("images/bobby neutral c.png", 0.7)
-AttributeError: 'function' object has no attribute 'FactorScale'
+  File "game/script.rpy", line 190, in script
+    jump correctobrockoli
+ScriptError: could not find label 'correctobrockoli'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 9, in script
-    image bobby neutral c left = Image.FactorScale("images/bobby neutral c.png", 0.7)
-  File "C:\Users\pierc\Downloads\renpy-7.3.5-sdk/renpy/ast.py", line 1007, in execute
-    img = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "C:\Users\pierc\Downloads\renpy-7.3.5-sdk/renpy/python.py", line 2128, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 9, in <module>
-    image bobby neutral c left = Image.FactorScale("images/bobby neutral c.png", 0.7)
-AttributeError: 'function' object has no attribute 'FactorScale'
+  File "game/script.rpy", line 190, in script
+    jump correctobrockoli
+  File "C:\Users\pierc\Downloads\renpy-7.3.5-sdk/renpy/ast.py", line 1697, in execute
+    rv = renpy.game.script.lookup(target)
+  File "C:\Users\pierc\Downloads\renpy-7.3.5-sdk/renpy/script.py", line 900, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'correctobrockoli'.
 

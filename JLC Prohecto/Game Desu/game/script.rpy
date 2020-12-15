@@ -3,13 +3,19 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define b = Character("Bobby Smith", image="bobby")
-# Eugene Zuckerberg
+define b = Character("Bobo Smith", image="bobby")
 define e = Character("Old Man", image="eugene angry right")
+define w = Character("Waiter", image="claire neutral")
+define c = Character("Claire", image="claire neutral")
+define k = Character("Brock Spear", image="brockoli")
+define n = Character("Narrator", image="eugene angry right")
 image bobby neutral c = im.FactorScale("images/bobby neutral c.png", 0.7)
+image brockoli = im.FactorScale("images/brockoli.png", 0.5)
 image bobby neutral c left = Image("images/bobby neutral c.png", xalign=-1.0)
 image eugene angry = im.FactorScale("images/eugene angry.png", 0.7)
 image eugene angry right = Image("images/eugene angry.png", xalign=1.0)
+image claire neutral = im.FactorScale("images/claire neutral.png", 0.7)
+image claire excited = im.FactorScale("images/claire excited.png", 0.7)
 
 
 # The game starts here.
@@ -70,11 +76,126 @@ label start:
     with dissolve
     show eugene angry
     
-    e "*old man runs off like leprechaun laughing*"
+    e "*old man runs off laughing like a leprechaun*"
 
     hide eugene angry
+    show bobby neutral c
     with dissolve
 
+    b "Sorry about that, %(player_name)s ill get you a new hand sanitizer later for now lets keep going."
+
+    hide bobby neutral c
+    scene black
+    with dissolve
+
+    n "About half an hour later..."
+
+    scene bar
+    with dissolve
+    
+    n "You sit down at a table and a waiter walks up"
+
+    show claire neutral
+    with dissolve
+
+    w "Irasshaimase, Nihonshu wa ikagadesu ka?"
+
+    $ player_sake = renpy.input("Irasshaimase, Nihonshu wa ikagadesu ka?(Answer in Japanese)")
+
+    $ player_sake = player_sake.strip()
+
+    if player_sake == "":
+        n "Wrong, Now you have to learn! HA"    
+        jump gay
+    elif player_sake == "Hai":
+        n "You did it, Now you dont have to learn! YEEEEEAAAA"
+        jump lesbo 
+    else:
+        n "Wrong, Now you have to learn! HA"   
+        jump gay    
+
     # This ends the game.
+
+    return
+
+
+label gay:
+
+    hide claire neutral
+    show claire excited
+    with dissolve
+
+    w "Oh a foreigner that doesnt know japanese!?!? Ive always wanted to teach a foreigner japanese!(Ā, nihongo ga wakaranai gaikoku hito! ? ! ? Watashi wa itsumo gaikoku hito ni nihonjin o oshietai to omotte imashita!)"
+
+    hide claire excited
+    show bobby neutral c
+    with dissolve
+
+    b "Well thats just what we are looking for! Please teach them the basics while i take this call outside.(Sore ga watashitachi ga sagashite iru monodesu! Watashi ga kono denwa o sotonidasu-kan, karera ni kihon o oshietekudasai.)"
+
+    hide bobby neutral c
+    show claire excited
+    with dissolve
+
+    w "Hello is konichiwa and good evening is konbawa. The way to ask someones name is O-namae wa nan desu ka?"
+
+    w "PlaceHolder"
+    
+    w "PlaceHolder"
+    
+    w "PlaceHolder"
+    
+    w "PlaceHolder"
+    
+    w "PlaceHolder"
+    
+    n "Bobo comes back"
+
+    b "We have to leave now because i have to go to a business meeting in a couple of hours so we have to go to the final place asap! Thank you Waitress for the help!"
+
+    
+    jump lesbo
+
+    return
+
+label lesbo:
+
+    hide claire neutral
+    scene black
+    with dissolve
+
+    n "After going to the bar you and Bobo go to a nearby park called Rinshinomori Park"
+    
+    scene park1
+    with dissolve
+
+    n "You and Bobo see an bald American man yelling at a kid"
+
+    scene park2
+    show brockoli
+    with dissolve
+
+    $ player_brock = renpy.input("You go up to the man and try to ask, in Japanese: Hello what is your name?")
+
+    $ player_brock = player_brock.strip()
+
+    if player_brock == "":
+        n "Wrong, Time to Learn"    
+        jump badbrockoli
+    elif player_brock == "Konichiwa O-namae wa nan desu ka?":
+        n "You said it correctly!"
+        jump correctobrockoli 
+    elif player_brock == "Konichiwa O-namae wa nan desu ka":
+        n "You said it correctly!"
+        jump correctobrockoli 
+    elif player_brock == "Konichiwa, O-namae wa nan desu ka":
+        n "You said it correctly!"
+        jump correctobrockoli 
+    elif player_brock == "Konichiwa, O-namae wa nan desu ka?":
+        n "You said it correctly!"
+        jump correctobrockoli 
+    else:
+        n "Wrong, Time to Learn"    
+        jump badbrockoli     
 
     return
