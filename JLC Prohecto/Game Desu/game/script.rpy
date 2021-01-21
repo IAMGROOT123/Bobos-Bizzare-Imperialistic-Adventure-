@@ -10,7 +10,7 @@ define c = Character("Claire", image="claire neutral")
 define k = Character("Brock Spear", image="brockoli")
 define n = Character("Narrator", image="eugene angry right")
 image bobby neutral c = im.FactorScale("images/bobby neutral c.png", 0.7)
-image bobby_smiling_c = im.FactorScale("images/bobby neutral c.png", 0.7)
+image bobby_smiling_c = im.FactorScale("images/bobby_smiling_c.png", 0.7)
 image brockoli = im.FactorScale("images/brockoli.png", 0.7)
 image bobby neutral c left = Image("images/bobby neutral c.png", xalign=-1.0)
 image eugene angry = im.FactorScale("images/eugene angry.png", 0.7)
@@ -140,15 +140,15 @@ label gay:
 
     w "Hello is konichiwa and good evening is konbawa. The way to ask someones name is O-namae wa nan desu ka?"
 
-    w "PlaceHolder"
+    w "The way to say who is that in japanese is Kore wa dare desu ka?"
     
-    w "PlaceHolder"
+    w "Also who are you in Japanese is Anata wa dare desu ka?"
     
-    w "PlaceHolder"
+    w "Next what is this in Japanese is Kore wa nan desu ka?"
     
-    w "PlaceHolder"
+    w "Then what is that in Japanese is Are wa nan desu ka?"
     
-    w "PlaceHolder"
+    w "Finally when are you going in Japanese is Itsu iku no?"
     
     n "Bobo comes back"
 
@@ -170,7 +170,7 @@ label lesbo:
     scene park1
     with dissolve
 
-    n "You and Bobo see an bald American man yelling at a kid"
+    n "You and Bobo see an bald Japanese man yelling at a kid"
 
     scene park2
     show brockoli:
@@ -194,6 +194,37 @@ label lesbo:
         n "You said it correctly!"
         jump correctobrockoli 
     elif player_brock == "Konichiwa, O-namae wa nan desu ka?":
+        n "You said it correctly!"
+        jump correctobrockoli 
+    else:
+        n "Wrong, You get beaten up by the old japanese nationalist for not knowing Japanese"
+
+    return
+
+label correctobrockoli:
+
+    scene park2
+    show brockoli:
+        xalign 1.0
+        yalign 1.0
+    with dissolve
+
+    $ player_brocko = renpy.input("You go up to the man and try to ask, in Japanese: Hello what is your name?")
+
+    $ player_brocko = player_brocko.strip()
+
+    if player_brocko == "":
+        n "Wrong, You get beaten up by the old japanese nationalist for not knowing Japanese"    
+    elif player_brocko == "Konichiwa O-namae wa nan desu ka?":
+        n "You said it correctly!"
+        jump correctobrockoli 
+    elif player_brocko == "Konichiwa O-namae wa nan desu ka":
+        n "You said it correctly!"
+        jump correctobrockoli 
+    elif player_brocko == "Konichiwa, O-namae wa nan desu ka":
+        n "You said it correctly!"
+        jump correctobrockoli 
+    elif player_brocko == "Konichiwa, O-namae wa nan desu ka?":
         n "You said it correctly!"
         jump correctobrockoli 
     else:
