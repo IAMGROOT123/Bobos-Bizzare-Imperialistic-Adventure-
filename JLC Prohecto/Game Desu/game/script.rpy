@@ -221,13 +221,16 @@ label correctobrockoli:
 
     if player_brocko == "":
         n "Wrong, You get beaten up by the old japanese nationalist for not knowing Japanese"    
-    elif player_brocko == "Kore wa dare desu ka?":
+    elif player_brocko == "Kore wa?":
         n "You said it correctly!"
         jump penisboi 
-    elif player_brocko == "Kore wa dare desu ka":
+    elif player_brocko == "Kore wa":
         n "You said it correctly!"
         jump penisboi 
-    elif player_brocko == "kore wa dare desu ka":
+    elif player_brocko == "kore wa":
+        n "You said it correctly!"
+        jump penisboi 
+    elif player_brocko == "kore wa?":
         n "You said it correctly!"
         jump penisboi 
     else:
@@ -250,22 +253,22 @@ label penisboi:
 
     if player_brockol == "":
         n "Wrong, You get beaten up by the old japanese nationalist for not knowing Japanese"    
-    elif player_brockol == "Are wa nan desu ka?":
+    elif player_brockol == "Nan desu ka?":
         hide brockoli
         scene sangelswanels
         n "The old Japanese man says patient and you see the Kanja bolting at you and those are the final things you see. You have completed the game hooray!"
         jump fuckhead 
-    elif player_brockol == "Are wa nan desu ka":
+    elif player_brockol == "Nan desu ka":
         hide brockoli
         scene sangelswanels
         n "The old Japanese man says patient and you see the Kanja bolting at you and those are the final things you see. You have completed the game hooray!"
         jump fuckhead 
-    elif player_brockol == "are wa nan desu ka":
+    elif player_brockol == "nan desu ka":
         hide brockoli
         scene sangelswanels
         n "The old Japanese man says patient and you see the Kanja bolting at you and those are the final things you see. You have completed the game hooray!"
         jump fuckhead 
-    elif player_brockol == "are wa nan desu ka?":
+    elif player_brockol == "nan desu ka?":
         hide brockoli
         scene sangelswanels
         n "The old Japanese man says patient and you see the Kanja bolting at you and those are the final things you see. You have completed the game hooray!"
