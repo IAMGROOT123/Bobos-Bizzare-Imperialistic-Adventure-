@@ -2,17 +2,23 @@
 
 While running game code:
   File "game/script.rpy", line 185, in script
-    jump badbrockoli
-ScriptError: could not find label 'badbrockoli'.
+    if player_brock == "":
+  File "game/script.rpy", line 199, in <module>
+    elif player_brocko == "Konichiwa, Onamae wa nan desu ka?":
+NameError: name 'player_brocko' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
   File "game/script.rpy", line 185, in script
-    jump badbrockoli
-  File "renpy/ast.py", line 1697, in execute
-    rv = renpy.game.script.lookup(target)
-  File "renpy/script.py", line 900, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'badbrockoli'.
+    if player_brock == "":
+  File "C:\Users\pierc\Downloads\renpy-7.3.5-sdk/renpy/ast.py", line 1838, in execute
+    if renpy.python.py_eval(condition):
+  File "C:\Users\pierc\Downloads\renpy-7.3.5-sdk/renpy/python.py", line 2135, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\pierc\Downloads\renpy-7.3.5-sdk/renpy/python.py", line 2128, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 199, in <module>
+    elif player_brocko == "Konichiwa, Onamae wa nan desu ka?":
+NameError: name 'player_brocko' is not defined
 

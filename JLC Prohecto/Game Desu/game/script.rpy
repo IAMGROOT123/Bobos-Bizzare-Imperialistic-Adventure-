@@ -196,10 +196,10 @@ label lesbo:
     elif player_brock == "Konichiwa, O-namae wa nan desu ka?":
         n "You said it correctly!"
         jump correctobrockoli 
-    elif player_brocko == "Konichiwa, Onamae wa nan desu ka?":
+    elif player_brock == "Konichiwa, Onamae wa nan desu ka?":
         n "You said it correctly!"
         jump correctobrockoli 
-    elif player_brocko == "Konichiwa Onamae wa nan desu ka?":
+    elif player_brock == "Konichiwa Onamae wa nan desu ka?":
         n "You said it correctly!"
         jump correctobrockoli 
     else:
