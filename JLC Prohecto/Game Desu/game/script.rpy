@@ -265,7 +265,7 @@ label penisboi:
         scene sangelswanels
         n "The old Japanese man says patient and you see the Kanja bolting at you and those are the final things you see. You have completed the game hooray!"
         jump fuckhead 
-    elif player_brockol == "are wa nan desu ka?":\
+    elif player_brockol == "are wa nan desu ka?":
         hide brockoli
         scene sangelswanels
         n "The old Japanese man says patient and you see the Kanja bolting at you and those are the final things you see. You have completed the game hooray!"
