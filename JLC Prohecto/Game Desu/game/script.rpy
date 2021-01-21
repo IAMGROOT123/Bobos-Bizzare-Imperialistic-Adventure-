@@ -178,7 +178,7 @@ label lesbo:
         yalign 1.0
     with dissolve
 
-    $ player_brock = renpy.input("You go up to the man and try to ask, in Japanese: Hello what is your name?")
+    $ player_brock = renpy.input("You go up to the man and try to ask, in Japanese: Hello, what is your name?")
 
     $ player_brock = player_brock.strip()
 
@@ -196,6 +196,12 @@ label lesbo:
     elif player_brock == "Konichiwa, O-namae wa nan desu ka?":
         n "You said it correctly!"
         jump correctobrockoli 
+    elif player_brocko == "Konichiwa, Onamae wa nan desu ka?":
+        n "You said it correctly!"
+        jump correctobrockoli 
+    elif player_brocko == "Konichiwa Onamae wa nan desu ka?":
+        n "You said it correctly!"
+        jump correctobrockoli 
     else:
         n "Wrong, You get beaten up by the old japanese nationalist for not knowing Japanese"
 
@@ -209,25 +215,68 @@ label correctobrockoli:
         yalign 1.0
     with dissolve
 
-    $ player_brocko = renpy.input("You go up to the man and try to ask, in Japanese: Hello what is your name?")
+    $ player_brocko = renpy.input("You point at the child and ask, in Japanese: Who is that?")
 
     $ player_brocko = player_brocko.strip()
 
     if player_brocko == "":
         n "Wrong, You get beaten up by the old japanese nationalist for not knowing Japanese"    
-    elif player_brocko == "Konichiwa O-namae wa nan desu ka?":
+    elif player_brocko == "Kore wa dare desu ka?":
         n "You said it correctly!"
-        jump correctobrockoli 
-    elif player_brocko == "Konichiwa O-namae wa nan desu ka":
+        jump penisboi 
+    elif player_brocko == "Kore wa dare desu ka":
         n "You said it correctly!"
-        jump correctobrockoli 
-    elif player_brocko == "Konichiwa, O-namae wa nan desu ka":
+        jump penisboi 
+    elif player_brocko == "kore wa dare desu ka":
         n "You said it correctly!"
-        jump correctobrockoli 
-    elif player_brocko == "Konichiwa, O-namae wa nan desu ka?":
-        n "You said it correctly!"
-        jump correctobrockoli 
+        jump penisboi 
     else:
         n "Wrong, You get beaten up by the old japanese nationalist for not knowing Japanese"
 
+    return
+
+
+label penisboi:
+
+    scene park2
+    show brockoli:
+        xalign 1.0
+        yalign 1.0
+    with dissolve
+
+    $ player_brockol = renpy.input("The old Japanese man says it is his kanja and you ask, in Japanese: What is that?")
+
+    $ player_brockol = player_brockol.strip()
+
+    if player_brockol == "":
+        n "Wrong, You get beaten up by the old japanese nationalist for not knowing Japanese"    
+    elif player_brockol == "Are wa nan desu ka?":
+        hide brockoli
+        scene sangelswanels
+        n "The old Japanese man says patient and you see the Kanja bolting at you and those are the final things you see. You have completed the game hooray!"
+        jump fuckhead 
+    elif player_brockol == "Are wa nan desu ka":
+        hide brockoli
+        scene sangelswanels
+        n "The old Japanese man says patient and you see the Kanja bolting at you and those are the final things you see. You have completed the game hooray!"
+        jump fuckhead 
+    elif player_brockol == "are wa nan desu ka":
+        hide brockoli
+        scene sangelswanels
+        n "The old Japanese man says patient and you see the Kanja bolting at you and those are the final things you see. You have completed the game hooray!"
+        jump fuckhead 
+    elif player_brockol == "are wa nan desu ka?":\
+        hide brockoli
+        scene sangelswanels
+        n "The old Japanese man says patient and you see the Kanja bolting at you and those are the final things you see. You have completed the game hooray!"
+        jump fuckhead 
+    else:
+        n "Wrong, You get beaten up by the old japanese nationalist for not knowing Japanese"
+
+    return
+
+label fuckhead:
+
+    scene black
+    n "This Game was made by Pierce Goodman, Please burn it after use so no one has to go through watching this monstrosity"    
     return
